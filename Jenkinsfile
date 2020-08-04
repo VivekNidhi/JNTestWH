@@ -5,6 +5,9 @@ pipeline {
         JAVA_TOOL_OPTIONS = "-Duser.home=/var/maven"
     }
     agent {
+        
+        label 'master' 
+  }
         docker {
             image "maven:3.6.0-jdk-13"
             label "master"
