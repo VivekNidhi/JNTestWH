@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage ("Build") {
             steps {
-                echo "Vivek araa mone!!   "
+                echo "Vivek Nidhi, Anu, Vivek  mone!!   "
             }
 
             
