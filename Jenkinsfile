@@ -4,8 +4,9 @@ pipeline {
         stage ("Build") {
             steps {
                 echo "Vivek Nidhi, Anu, Avni and Anvika  mone!!   "
-                
-            }
+                echo date
+            }   
+             
 
             
         }
