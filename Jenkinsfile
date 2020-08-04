@@ -14,6 +14,17 @@ pipeline {
 
 
     }
+
+   post{
+       always {
+          echo "************CLEANING THE WORKSPACE******" 
+          cleanWS()
+
+       }
+
+   }
+
+
 }
 
 
