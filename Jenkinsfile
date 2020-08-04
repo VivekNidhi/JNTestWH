@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage ("Build") {
             steps {
-                echo "The first pipeline check "
+                echo "Vivek araa mone!! "
             }
 
             
