@@ -23,8 +23,7 @@ pipeline {
 
     post {
         always {
-            echo "Cleaning Stage"
-            cleanWs()
+             cleanWs()
         }
     }
 }
