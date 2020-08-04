@@ -1,31 +1,30 @@
+#!groovy
+
 pipeline {
-    agent any 
-    stages {
-        stage ("Build") {
-            steps {
-                echo "Vivek Nidhi, Anu, Avni and Anvika  mone!!   "
-                echo "Hello Kevin"
-            }   
-             
-
-            
+    environment {
+        JAVA_TOOL_OPTIONS = "-Duser.home=/var/maven"
+    }
+    agent {
+        docker {
+            image "maven:3.6.0-jdk-13"
+            label "docker"
+            args "-v /tmp/maven:/var/maven/.m2 -e MAVEN_CONFIG=/var/maven/.m2"
         }
-
-
-
     }
 
-   post{
-       always {
-          echo "************CLEANING THE WORKSPACE******" 
-          cleanWs()
+    stages {
+        stage("Build") {
+            steps {
+                sh "mvn -version"
+                sh "mvn clean install"
+            }
+        }
+    }
 
-       }
-
-   }
-
-
+    post {
+        always {
+            echo "Cleaning Stage"
+            cleanWs()
+        }
+    }
 }
-
-
-    
