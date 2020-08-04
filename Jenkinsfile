@@ -4,7 +4,7 @@ pipeline {
         stage ("Build") {
             steps {
                 echo "Vivek Nidhi, Anu, Avni and Anvika  mone!!   "
-                input = "Hello Vivek Nidhi ki jai ho GI"
+                input = "Hello Nidhi Mas ki jai ho GI"
             }
 
             
